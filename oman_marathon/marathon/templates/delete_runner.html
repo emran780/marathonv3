@@ -1,0 +1,19 @@
+<!-- delete_runner.html -->
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Delete Runner{% endblock %}
+
+{% block content %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <h2>Delete Account</h2>
+
+    <p>We're sorry to see you go. If you're sure about deleting your account, please click the button below:</p>
+
+    <form method="post" action="{% url 'delete_runner' runner.id %}">
+        {% csrf_token %}
+        <button type="submit">Yes, delete</button>
+    </form>
+    <p>Changed your mind? No worries, you can always continue your running journey with us!</p>
+    <a href="{% url 'runner_dashboard' %}">Cancel</a>
+{% endblock %}

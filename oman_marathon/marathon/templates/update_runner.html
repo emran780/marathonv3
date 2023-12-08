@@ -1,0 +1,25 @@
+<!-- update_runner.html -->
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Update Runner Information{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <div class="update-runner-form">
+        <h2>Update Information</h2>
+        
+        <p>Keep your runner profile up-to-date. Make changes and stay connected with the Oman Marathon community!</p>
+
+        <form method="post" action="{% url 'update_runner' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+
+            <button type="submit">Update Information</button>
+        </form>
+
+        <p>Not sure what to update? Feel free to keep your information as is, or make changes based on your preferences.</p>
+        
+        <a href="{% url 'runner_dashboard' %}" class="back-link">Back to your Dashboard</a>
+    </div>
+{% endblock %}

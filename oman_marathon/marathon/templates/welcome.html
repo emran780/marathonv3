@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Welcome to Oman Marathon Day{% endblock %}
+
+{% block content %}
+    <div>
+        <h2>BE A PART OF OMAN'S BIGGEST RACE</h2>
+        <p>Join us for an unforgettable marathon experience at the Sea Front in Muscat.</p>
+        <!-- Add background image -->
+        <div class="background-image" style="background-image: url('{% static 'images/unsplash.jpg' %}')"></div>
+    </div>
+    <p>
+        <strong>Why Oman Marathon Day?</strong>
+    </p>
+    <ul>
+        <li>Experience the breathtaking beauty of Muscat's coastline.</li>
+        <li>Run alongside fellow enthusiasts from around the world.</li>
+        <li>Choose from various race categories catering to all fitness levels.</li>
+        <li>Support charitable causes with your participation.</li>
+    </ul>
+    <p>
+        <a href="{% url 'contact_us' %}" >Contact us </a> for registration or <a href="{% url 'about' %}">learn more</a>  about the event.
+    </p>
+{% endblock %}

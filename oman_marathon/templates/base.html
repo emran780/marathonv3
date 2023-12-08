@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="author" content="Mohammed Emran Uddin | 202211059">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Oman Marathon{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+
+</head>
+<body>
+
+    <header>
+        <div class="social-media">
+            <a href="https://www.facebook.com/MuscatMarathon/" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://twitter.com/muscat_marathon" target="_blank" rel="noopener noreferrer">Twitter</a>
+            <a href="https://www.instagram.com/muscatmarathon/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://www.strava.com/clubs/al-mouj-muscat-marathon-313636" target="_blank" rel="noopener noreferrer">strava</a>
+            <a href="https://www.youtube.com/channel/UCZ7Xw8nILd9mPBjNH2du3Zw" target="_blank" rel="noopener noreferrer">Youtube</a>
+        </div>
+        <h1> MUSCAT MARATHON </h1>
+
+    </header>
+
+    <nav>
+        <ul>
+            {% if user.is_authenticated %}
+                <!-- For Runners -->
+                <li><a href="{% url 'runner_dashboard' %}">Dashboard</a></li>
+                <li><a href="{% url 'welcome' %}">Welcome</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'past_events' %}">Past Events</a></li>
+                <li><a href="{% url 'contact_us' %}">Contact Us</a></li>
+                <li><a href="{% url 'logout' %}">Logout</a></li>
+            {% else %}
+                <!-- For Visitors -->
+                <li><a href="{% url 'welcome' %}">Welcome</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'past_events' %}">Past Events</a></li>
+                <li><a href="{% url 'contact_us' %}">Contact Us</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+    
+
+    <section>
+        {% block content %}
+        <!-- Content of the specific page goes here -->
+        {% endblock %}
+    </section>
+    
+    <footer>
+        
+        <div class="social-media">
+            <a href="https://www.facebook.com/MuscatMarathon/" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://twitter.com/muscat_marathon" target="_blank" rel="noopener noreferrer">Twitter</a>
+            <a href="https://www.instagram.com/muscatmarathon/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://www.strava.com/clubs/al-mouj-muscat-marathon-313636" target="_blank" rel="noopener noreferrer">strava</a>
+            <a href="https://www.youtube.com/channel/UCZ7Xw8nILd9mPBjNH2du3Zw" target="_blank" rel="noopener noreferrer">Youtube</a>
+        </div>
+       
+        <p>&copy; Al Mouj Muscat Marathon</p>
+    </footer>
+
+    <script src="{% static 'js/script.js' %}"></script>
+    
+</body>
+</html>

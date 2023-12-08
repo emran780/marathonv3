@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %}About Oman Marathon Day{% endblock %}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <h2>About Oman Marathon Day</h2>
+    <p>
+        Welcome to Oman Marathon Day, an exhilarating event that unites runners of all ages and abilities
+        to relish the joy of marathon running in the scenic city of Muscat.
+    </p>
+    <p>
+        Our event showcases three main categories of runs:
+    </p>
+    <div class="run-info" style="background-image: url('{% static 'images/unsplash.jpg' %}');">
+        <h3>Kids' RUN</h3>
+        <p>
+            Let the little ones embark on a delightful journey with our Kids' Run, a fun and interactive experience
+            designed exclusively for children. Filled with laughter and excitement, it's the perfect introduction
+            to the world of running for our youngest participants.
+        </p>
+    </div>
+    <div class="run-info" style="background-image: url('{% static 'images/unsplash.jpg' %}');">
+        <h3>5KM RUN</h3>
+        <p>
+            Lace up your running shoes for the 5KM Run! This moderate-distance run is tailored for both beginners
+            and intermediate runners. Enjoy the scenic beauty of Muscat as you make your way through the course,
+            setting personal milestones and creating memories along the way.
+        </p>
+    </div>
+    <div class="run-info" style="background-image: url('{% static 'images/unsplash.jpg' %}');">
+        <h3>10KM RUN</h3>
+        <p>
+            Ready for a challenge? The 10KM Run is designed for experienced and competitive runners. Test your
+            endurance and push your limits as you navigate the course. It's a thrilling experience that rewards
+            determination and showcases the spirit of true marathon running.
+        </p>
+    </div>
+    <p>
+        Join us in this extraordinary marathon experience, where each run offers a unique adventure. Whether you're
+        running for fitness, competition, or the sheer joy of it, Oman Marathon Day has something special for everyone.
+    </p>
+    <p>
+        Register now and embark on a journey to the finish line!
+    </p>
+
+
+{% endblock %}

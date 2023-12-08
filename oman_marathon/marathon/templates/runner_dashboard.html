@@ -1,0 +1,45 @@
+<!-- runner_dashboard.html -->
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Runner Dashboard{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <div class="runner-dashboard">
+        <h2>Welcome, {{ runner.user.username }}!</h2>
+        <p>Congratulations on being part of the Oman Marathon community. Your dedication to running is truly inspiring!</p>
+
+        <div class="runner-info">
+            <ul>
+                <li>
+                    <strong>Biography:</strong> {{ runner.biography }}
+                </li>
+                <li>
+                    <strong>Healthy Condition:</strong> {{ runner.healthy_condition }}
+                </li>
+                <li>
+                    <strong>Nationality:</strong> {{ runner.nationality }}
+                </li>
+                <li>
+                    <strong>Chosen Run:</strong> {{ runner.chosen_run }}
+                </li>
+            </ul>
+        </div>
+
+        <div class="dashboard-links">
+            <a href="{% url 'update_runner' %}" class="update-link">Update Information</a>
+            <a href="{% url 'delete_runner' runner.id %}" class="delete-link">Delete Account</a>
+        </div>
+
+        <div class="runner-tips">
+            <h3>Running Tips</h3>
+            <p>Stay hydrated, maintain a balanced diet, and always listen to your body. Remember, consistency is key to improvement!</p>
+        </div>
+
+        <div class="runner-achievements">
+            <h3>Your Achievements</h3>
+            <p>Celebrate your milestones, whether it's completing a 5K or setting a personal best. Every step forward is an achievement!</p>
+        </div>
+    </div>
+{% endblock %}

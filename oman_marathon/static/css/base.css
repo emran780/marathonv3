@@ -1,0 +1,104 @@
+/* Reset styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header styles */
+header {
+    background-color: #343a40;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+header .social-media {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+header .social-media a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+header .social-media a:hover {
+    color: #ffea00;
+}
+
+header h1 {
+    font-size: 42px;
+    margin-top: 20px;
+}
+
+/* Navigation styles */
+nav {
+    background-color: #e9ecef;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align:justify;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #343a40;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+/* Section styles */
+section {
+    padding: 20px 0;
+}
+
+/* Footer styles */
+footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer .social-media a {
+    margin: 0 8px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+footer .social-media a:hover {
+    color: #ffea00;
+}
